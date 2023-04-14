@@ -48,3 +48,11 @@ void Board::releaseFromWell() {
         }
     }
 }
+
+void Board::reset() {
+    for (auto player = _players.begin(); player != _players.end(); ++player) {
+        player->reset();
+    }
+
+    _activePlayers = _players.size();
+}

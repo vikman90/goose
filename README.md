@@ -7,12 +7,13 @@ This project is an implementation of the [Game of the Goose](https://en.wikipedi
 ## How to play
 
 ```shell
-goose [PLAYERS]
+goose [PLAYERS [GAMES]]
 ```
 
 |Option|Description|Range|Default|
 |---|---|---|---|
 |`PLAYERS`|Number of players|0 < `PLAYERS` ≤ 4294967295|2|
+|`GAMES`|Number of games|0 < `GAMES` ≤ 4294967295|1|
 
 <details><summary><h3>Gameplay example</h3></summary>
 
@@ -22,6 +23,9 @@ goose-game 3
 
 ```
 Players: 3
+
+Game: 1
+════════════════════════════════════════════════════════════════
 [P1] 4: 1 → 5: From goose to goose, faster than a moose → 9 (↵)
 [P1] 4: 9 → 13
 [P2] 2: 1 → 3
@@ -91,6 +95,7 @@ Players: 3
 [P3] 1: 62 → 63: End ──────────────────────────────────────────
 ════════════════════════════════════════════════════════════════
 Winner: Player 1
+
 Time: 0.022 ms.
 ```
 

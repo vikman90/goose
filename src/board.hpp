@@ -11,6 +11,8 @@ class Board {
     Board(unsigned nPlayers);
     unsigned playGame();
     void releaseFromWell();
+    void reset();
+
     const unsigned &activePlayers;
 
   private:

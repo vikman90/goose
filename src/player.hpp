@@ -13,6 +13,7 @@ class Player {
     Player(const Player &other);
     bool playTurn();
     void release();
+    void reset();
 
     unsigned number;
     const unsigned &square;

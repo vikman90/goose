@@ -71,6 +71,12 @@ void Player::release() {
     }
 }
 
+void Player::reset() {
+    _square = 1;
+    _stayTurns = 0;
+    _finished = false;
+}
+
 void Player::rollDice() {
     auto roll = distribution(generator);
     auto next = _square + roll;
