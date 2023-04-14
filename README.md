@@ -22,61 +22,75 @@ goose-game 3
 
 ```
 Players: 3
-[P1] 6: 1 → 7
-[P2] 6: 1 → 7
-[P3] 2: 1 → 3
-[P1] 2: 7 → 9: From goose to goose, faster than a moose → 14 (↵)
-[P1] 6: 14 → 20
-[P2] 3: 7 → 10
-[P3] 1: 3 → 4
-[P1] 5: 20 → 25
-[P2] 2: 10 → 12: From bridge to bridge, I roll as I reach → 6 (↵)
-[P2] 1: 6 → 7
-[P3] 4: 4 → 8
-[P1] 4: 25 → 29
-[P2] 4: 7 → 11
-[P3] 4: 8 → 12: From bridge to bridge, I roll as I reach → 6 (↵)
-[P3] 4: 6 → 10
-[P1] 5: 29 → 34
-[P2] 3: 11 → 14: From goose to goose, faster than a moose → 18 (↵)
-[P2] 6: 18 → 24
+[P1] 4: 1 → 5: From goose to goose, faster than a moose → 9 (↵)
+[P1] 4: 9 → 13
+[P2] 2: 1 → 3
+[P3] 4: 1 → 5: From goose to goose, faster than a moose → 9 (↵)
+[P3] 1: 9 → 10
+[P1] 5: 13 → 18: From goose to goose, faster than a moose → 23 (↵)
+[P1] 6: 23 → 29
+[P2] 5: 3 → 8
 [P3] 4: 10 → 14: From goose to goose, faster than a moose → 18 (↵)
-[P3] 5: 18 → 23: From goose to goose, faster than a moose → 27 (↵)
-[P3] 1: 27 → 28
-[P1] 5: 34 → 39
-[P2] 5: 24 → 29
-[P3] 4: 28 → 32: From goose to goose, faster than a moose → 36 (↵)
+[P3] 6: 18 → 24
+[P1] 3: 29 → 32: From goose to goose, faster than a moose → 36 (↵)
+[P1] 3: 36 → 39
+[P2] 2: 8 → 10
+[P3] 2: 24 → 26: From dice to dice, I roll to win the prize → 53 (↵)
+[P3] 5: 53 → 58: The death → 1
+[P1] 6: 39 → 45: From goose to goose, faster than a moose → 50 (↵)
+[P1] 3: 50 → 53: From dice to dice, I roll to win the prize → 26 (↵)
+[P1] 4: 26 → 30
+[P2] 4: 10 → 14: From goose to goose, faster than a moose → 18 (↵)
+[P2] 6: 18 → 24
+[P3] 6: 1 → 7
+[P1] 4: 30 → 34
+[P2] 6: 24 → 30
+[P3] 6: 7 → 13
+[P1] 2: 34 → 36: From goose to goose, faster than a moose → 41 (↵)
+[P1] 4: 41 → 45: From goose to goose, faster than a moose → 50 (↵)
+[P1] 2: 50 → 52: The prison: Stay for three turns
+[P2] 5: 30 → 35
+[P3] 3: 13 → 16
+[P1] -: 52: Hold on (3)
+[P2] 2: 35 → 37
+[P3] 2: 16 → 18: From goose to goose, faster than a moose → 23 (↵)
+[P3] 5: 23 → 28
+[P1] -: 52: Hold on (2)
+[P2] 5: 37 → 42: Lost in the Maze → 30
+[P3] 3: 28 → 31: The well: Stay for two turns
+[P1] -: 52: Hold on (1)
+[P2] 1: 30 → 31: The well: Stay for two turns
+    [P3] Released
+[P3] 1: 31 → 32: From goose to goose, faster than a moose → 36 (↵)
 [P3] 4: 36 → 40
-[P1] 5: 39 → 44
-[P2] 5: 29 → 34
-[P3] 1: 40 → 41: From goose to goose, faster than a moose → 45 (↵)
-[P3] 3: 45 → 48
-[P1] 2: 44 → 46
-[P2] 2: 34 → 36: From goose to goose, faster than a moose → 41 (↵)
-[P2] 2: 41 → 43
-[P3] 6: 48 → 54: From goose to goose, faster than a moose → 59 (↵)
-[P3] 4: 59 → 63: End ──────────────────────────────────────────
-[P1] 5: 46 → 51
-[P2] 1: 43 → 44
-[P1] 6: 51 → 57
-[P2] 6: 44 → 50: From goose to goose, faster than a moose → 54 (↵)
-[P2] 5: 54 → 59: From goose to goose, faster than a moose → 63 (↵)
-[P2] 6: 63 → 57
-[P1] 5: 57 → 62
-[P2] 3: 57 → 60
-[P1] 3: 62 → 61
-[P2] 6: 60 → 60
-[P1] 1: 61 → 62
-[P2] 6: 60 → 60
-[P1] 3: 62 → 61
+[P1] 5: 52 → 57
+[P2] -: 31: Hold on (2)
+[P3] 3: 40 → 43
+[P1] 3: 57 → 60
+[P2] -: 31: Hold on (1)
+[P3] 2: 43 → 45: From goose to goose, faster than a moose → 50 (↵)
+[P3] 6: 50 → 56
+[P1] 2: 60 → 62
+[P2] 5: 31 → 36: From goose to goose, faster than a moose → 41 (↵)
+[P2] 6: 41 → 47
+[P3] 2: 56 → 58: The death → 1
+[P1] 2: 62 → 62
+[P2] 3: 47 → 50: From goose to goose, faster than a moose → 54 (↵)
+[P2] 1: 54 → 55
+[P3] 5: 1 → 6: From bridge to bridge, I roll as I reach → 12 (↵)
+[P3] 6: 12 → 18: From goose to goose, faster than a moose → 23 (↵)
+[P3] 3: 23 → 26: From dice to dice, I roll to win the prize → 53 (↵)
+[P3] 3: 53 → 56
+[P1] 1: 62 → 63: End ──────────────────────────────────────────
+[P2] 5: 55 → 60
+[P3] 5: 56 → 61
 [P2] 2: 60 → 62
-[P1] 1: 61 → 62
+[P3] 5: 61 → 60
 [P2] 1: 62 → 63: End ──────────────────────────────────────────
-[P1] 5: 62 → 59: From goose to goose, faster than a moose → 63 (↵)
-[P1] 3: 63 → 60
-[P1] 3: 60 → 63: End ──────────────────────────────────────────
+[P3] 2: 60 → 62
+[P3] 1: 62 → 63: End ──────────────────────────────────────────
 ════════════════════════════════════════════════════════════════
-Winner: Player 3
+Winner: Player 1
 Time: 0.022 ms.
 ```
 

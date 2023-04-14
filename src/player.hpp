@@ -5,12 +5,17 @@
 
 #include <random>
 
+class Board;
+
 class Player {
   public:
-    Player();
+    Player(unsigned number, Board &board);
+    Player(const Player &other);
     bool playTurn();
+    void release();
 
-    unsigned number = 0;
+    unsigned number;
+    const unsigned &square;
     const bool &finished;
 
   private:
@@ -28,6 +33,7 @@ class Player {
     unsigned _square = 1;
     unsigned _stayTurns = 0;
     bool _finished = false;
+    Board &_board;
 
     static std::mt19937 generator;
     static std::uniform_int_distribution<> distribution;

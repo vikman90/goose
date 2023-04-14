@@ -10,7 +10,10 @@ class Board {
   public:
     Board(unsigned nPlayers);
     unsigned playGame();
+    void releaseFromWell();
+    const unsigned &activePlayers;
 
   private:
     std::vector<Player> _players;
+    unsigned _activePlayers;
 };

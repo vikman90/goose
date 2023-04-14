@@ -5,9 +5,10 @@
 
 using namespace std;
 
-Board::Board(unsigned nPlayers) : _players(vector<Player>(nPlayers)) {
+Board::Board(unsigned nPlayers)
+    : activePlayers(_activePlayers), _activePlayers(nPlayers) {
     for (auto i = 0u; i < nPlayers; i++) {
-        _players[i].number = i + 1;
+        _players.push_back(Player(i + 1, *this));
     }
 }
 
@@ -15,9 +16,7 @@ unsigned Board::playGame() {
     auto winner = 0u;
     bool gameOver;
 
-    do {
-        gameOver = true;
-
+    while (_activePlayers > 0) {
         for (auto it = _players.begin(); it != _players.end(); ++it) {
             auto &player = *it;
 
@@ -29,13 +28,23 @@ unsigned Board::playGame() {
                 continue;
             }
 
-            if (player.finished && winner == 0) {
-                winner = player.number;
-            }
+            if (player.finished) {
+                if (winner == 0) {
+                    winner = player.number;
+                }
 
-            gameOver = false;
+                _activePlayers--;
+            }
         }
-    } while (!gameOver);
+    };
 
     return winner;
+}
+
+void Board::releaseFromWell() {
+    for (auto player = _players.begin(); player != _players.end(); ++player) {
+        if (player->square == 31) {
+            player->release();
+        }
+    }
 }

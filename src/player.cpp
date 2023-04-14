@@ -2,6 +2,7 @@
 // April 9, 2023
 
 #include "player.hpp"
+#include "board.hpp"
 #include <iostream>
 
 #define DIE_MIN 1
@@ -12,9 +13,13 @@ using namespace std;
 std::mt19937 Player::generator(random_device{}());
 std::uniform_int_distribution<> Player::distribution(DIE_MIN, DIE_MAX);
 
-Player::Player()
-    : number(0), finished(_finished), _square(1), _stayTurns(0),
-      _finished(false) {}
+Player::Player(unsigned number, Board &board)
+    : number(number), square(_square), finished(_finished), _board(board) {}
+
+Player::Player(const Player &other)
+    : number(other.number), square(_square), finished(_finished),
+      _square(other._square), _stayTurns(other._stayTurns),
+      _finished(other._finished), _board(other._board) {}
 
 bool Player::playTurn() {
     if (_stayTurns > 0) {
@@ -56,6 +61,13 @@ bool Player::playTurn() {
     case 59: return goose();
     case 63: return end();
     default: return false;
+    }
+}
+
+void Player::release() {
+    if (_stayTurns > 0) {
+        cout << "\n     [P" << number << "] Released";
+        _stayTurns = 0;
     }
 }
 
@@ -119,6 +131,7 @@ bool Player::hotel() {
 
 bool Player::well() {
     cout << ": The well: Stay for two turns";
+    _board.releaseFromWell();
     _stayTurns = 2;
     return false;
 }
@@ -151,6 +164,10 @@ bool Player::prison() {
 bool Player::death() {
     cout << ": The death → 1";
     _square = 1;
+
+    if (_board.activePlayers == 2) {
+        _board.releaseFromWell();
+    }
 
     return false;
 }
